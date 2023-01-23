@@ -79,7 +79,7 @@ import { useState } from "react";
 ///// Functional Component
 
 const TemperatureDisplay = () => {
-  const [temp, setTemp] = useState(20);
+  const [temp, setTemp] = useState(25);
   const [className, setClassName] = useState("");
 
   const minusHandler = () => {
