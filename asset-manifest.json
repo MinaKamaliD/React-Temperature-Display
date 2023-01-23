@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/React-Temperature-Display/static/css/main.92dfc5fe.css",
-    "main.js": "/React-Temperature-Display/static/js/main.2d80971f.js",
+    "main.js": "/React-Temperature-Display/static/js/main.c56d39fc.js",
     "static/js/787.b8ba9ccb.chunk.js": "/React-Temperature-Display/static/js/787.b8ba9ccb.chunk.js",
     "static/media/temp.jpg": "/React-Temperature-Display/static/media/temp.3e2bd8f74fa30b547d1c.jpg",
     "index.html": "/React-Temperature-Display/index.html",
     "main.92dfc5fe.css.map": "/React-Temperature-Display/static/css/main.92dfc5fe.css.map",
-    "main.2d80971f.js.map": "/React-Temperature-Display/static/js/main.2d80971f.js.map",
+    "main.c56d39fc.js.map": "/React-Temperature-Display/static/js/main.c56d39fc.js.map",
     "787.b8ba9ccb.chunk.js.map": "/React-Temperature-Display/static/js/787.b8ba9ccb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92dfc5fe.css",
-    "static/js/main.2d80971f.js"
+    "static/js/main.c56d39fc.js"
   ]
 }
