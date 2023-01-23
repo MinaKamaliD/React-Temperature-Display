@@ -1,6 +1,6 @@
-import React from "react";
-import { Component } from "react";
+import React, { useEffect } from "react";
 import "./TemperatureDisplay.css";
+import { Component } from "react";
 import { useState } from "react";
 
 /////Class Component
@@ -18,23 +18,23 @@ import { useState } from "react";
 //   plusHandler() {
 //     this.setState((prevState) => {
 //       return { temp: prevState.temp + 1 };
-//     });
-//     console.log(this.state);
-//     {
-//       this.state.temp > 30 && this.setState({ class: "hot" });
+//     }, () => {
+//       {
+//       this.state.temp >= 30 && this.setState({ class: "hot" });
 //     }
 //     {
 //       this.state.temp > 20 &&
 //         this.state.temp < 30 &&
 //         this.setState({ class: "" });
 //     }
+//     });
+    
 //   }
 //   minusHandler() {
 //     this.setState((prevState) => {
 //       return { temp: prevState.temp - 1 };
-//     });
-
-//     {
+//     }, () => {
+//       {
 //       this.state.temp < 20 && this.setState({ class: "cold" });
 //     }
 //     {
@@ -42,6 +42,9 @@ import { useState } from "react";
 //         this.state.temp < 30 &&
 //         this.setState({ class: "" });
 //     }
+//     });
+
+    
 //   }
 
 //   render() {
@@ -82,23 +85,27 @@ const TemperatureDisplay = () => {
   const [temp, setTemp] = useState(25);
   const [className, setClassName] = useState("");
 
-  const minusHandler = () => {
-    setTemp(temp - 1);
+  useEffect(() => {
     {
       temp < 20 && setClassName("cold");
     }
     {
       temp > 20 && temp < 30 && setClassName("");
     }
-  };
-  const plusHandler = () => {
-    setTemp(temp + 1);
     {
-      temp > 30 && setClassName("hot");
+      temp >= 30 && setClassName("hot");
     }
     {
       temp > 20 && temp < 30 && setClassName("");
     }
+  }, [temp])
+
+  const minusHandler = () => {
+    setTemp(prevState => prevState - 1);
+  };
+
+  const plusHandler = () => {
+    setTemp(prevState => prevState + 1);
   };
 
   return (
